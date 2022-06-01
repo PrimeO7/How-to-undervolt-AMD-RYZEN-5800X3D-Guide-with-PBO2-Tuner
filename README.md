@@ -118,7 +118,13 @@ Install-Module -Name BurntToast
 
 You will, likely, get a message that says you need to install the NuGet provider. If you do, simply type in Y to proceed and PowerShell will take care of the rest. Once it’s installed, run the above command again. This time, you will likely get a message saying you’re installing a module from an untrusted repository. Again, type Y to proceed. The module will now be installed.
 
-Now paste **Set-ExecutionPolicy -ExecutionPolicy Unrestricted** into PowerShell and run the command. Press Y to proceed. This is necessary for Alert.ps1 to work in the future.
+Now paste
+
+```pwsh
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+```
+
+into PowerShell and run the command. Press Y to proceed. This is necessary for `Alert.ps1` to work in the future.
 
 **DO THIS AT YOUR OWN RISK**, since you're disabling a security feature of windows.
 
