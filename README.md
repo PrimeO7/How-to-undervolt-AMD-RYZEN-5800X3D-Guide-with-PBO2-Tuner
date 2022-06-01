@@ -100,13 +100,21 @@ If you are as paranoid as me and have the urge to check PBO2 Tuner after every r
 
 Find a Logo and save into the folder with PBO2 tuner.exe in it.
 
-Open a Text file and paste this into it **Import-Module BurntToast; New-BurntToastNotification -Text "PBO Offset has been applied!", 'PBO Offset has been applied!' -AppLogo (The Path to the PNG you will be using, Example: C:\Users\Username\Desktop\Debug\name.png)**
+Open a Text file and paste this into it:
 
-Don't forget to remove the **()** after -AppLogo.
+```pwsh
+Import-Module BurntToast;
+$pngPath="C:\Users\REPLACE_THIS_WITH_THE_PATH_TO_THE_PNG_FILE\whatever.png";
+New-BurntToastNotification -Text "PBO Offset has been applied!", 'PBO Offset has been applied!' -AppLogo $pngPath
+```
 
-Save as Alert.ps1, select All Files types and save in the same folder as PBO2 tuner.exe.
+Save as `Alert.ps1`, select All Files types and save in the same folder as PBO2 tuner.exe.
 
-Open Windows PowerShell as Administrator and execute this command **Install-Module -Name BurntToast**
+Open Windows PowerShell as Administrator and execute this command:
+
+```pwsh
+Install-Module -Name BurntToast
+```
 
 You will, likely, get a message that says you need to install the NuGet provider. If you do, simply type in Y to proceed and PowerShell will take care of the rest. Once it’s installed, run the above command again. This time, you will likely get a message saying you’re installing a module from an untrusted repository. Again, type Y to proceed. The module will now be installed.
 
