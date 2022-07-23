@@ -43,7 +43,7 @@ PowerShell script for BurntToast Alert
 Any PNG of your Choice for the Alert
 
 # 5) How to set PBO2 Tuner manually
-First download [Debug-cli.7zp](https://www.overclock.net/threads/corecycler-tool-for-testing-curve-optimizer-settings.1777398/page-39#post-28979881).
+First download [Debug-cli.7zp](https://www.overclock.net/threads/corecycler-tool-for-testing-curve-optimizer-settings.1777398/page-45#post-28999750).
 
 Get a Monitoring Software like [HwInfo](https://www.hwinfo.com/download/) or [RyzenMaster](https://www.amd.com/en/technologies/ryzen-master). You will need this to see your CPU Voltage and Temperature and to later confirm that your Settings work.
 
