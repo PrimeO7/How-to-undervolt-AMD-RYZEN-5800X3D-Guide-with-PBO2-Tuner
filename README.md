@@ -30,7 +30,7 @@ Set PBO OC Curve automatically with every system boot/restart/wakeup (means afte
 **Optional** possibility to create custom BurnedToast Alert whenever the CO Curve has been set automatically. This way, you will always have the assurance that it actually applied.
     
 # 4) What do we need?
-[Debug-cli.7zp](https://www.overclock.net/threads/corecycler-tool-for-testing-curve-optimizer-settings.1777398/page-39#post-28979881) from PJVol from Overclocker.net thread
+[Debug-cli.7zp](https://www.overclock.net/threads/corecycler-tool-for-testing-curve-optimizer-settings.1777398/page-45#post-28999750) from PJVol from Overclocker.net thread
 
 Monitoring software to confirm CO Curve has been set([HwInfo](https://www.hwinfo.com/download/) or [RyzenMaster](https://www.amd.com/en/technologies/ryzen-master))
 
