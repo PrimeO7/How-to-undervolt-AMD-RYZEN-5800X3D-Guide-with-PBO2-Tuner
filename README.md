@@ -70,11 +70,11 @@ Set General Settings.
 
 Create the Trigger for System startup.
 
-![Chapter 6 p2](https://user-images.githubusercontent.com/106172193/170519471-b033ca84-48ea-4822-88a4-a9daecc33b7f.png)
+![Chapter 6 p2](https://user-images.githubusercontent.com/38817357/225960925-1f5a4bde-8a96-4981-8cca-a738b9488c15.jpg)
 
 Create the Trigger for Wakeup.
 
-![Chapter 6 p3](https://user-images.githubusercontent.com/106172193/170519673-90d6766b-6397-4638-a2b8-08c8028839e9.png)
+![Chapter 6 p3](https://user-images.githubusercontent.com/38817357/225960921-001ed2b2-a2e1-4592-9526-642e971043f1.jpg)
 
 Create the Action for PBO2 tuner.exe to start with the Offsets as Startup arguments.
 
