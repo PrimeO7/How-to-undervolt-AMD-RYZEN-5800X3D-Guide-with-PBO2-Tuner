@@ -68,8 +68,8 @@ Set general settings.
 
 ![Chapter 6 p1_LI](https://user-images.githubusercontent.com/106172193/170519308-df13b85a-00c8-4e57-ad12-6d9b118ed1ac.jpg)
 
-Create the Trigger for login.
-You can set it to Any user but it's safer to set it to trigger on a specific user's login, as in the event of an unstable curve on logging in, you could log in as another user and remove or edit the task.
+Create the Trigger for logon.
+You can set it to Any user but it's safer to set it to trigger on a specific user's logon, as in the event of an unstable curve on logging on, you could log on as another user and remove or edit the task.
 
 ![Chapter 6 p2](https://github.com/Krzeszny/How-to-undervolt-AMD-RYZEN-5800X3D-Guide-with-PBO2-Tuner/assets/10529134/ab62408b-4925-4bbc-a274-dd4c24fdc85f)
 
