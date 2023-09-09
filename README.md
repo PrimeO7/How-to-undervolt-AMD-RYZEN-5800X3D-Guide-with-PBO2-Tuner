@@ -16,16 +16,16 @@ Get the Most out of your 5800X3D using PBO curve optimizer!
 
 
 # 1) What are we doing? 
-We are using PBO2 tuner to set an OC curve (AMD curve optimizer)
+We are using PBO2 Tuner to set a CO curve (PBO 2.0 Curve Optimizer)
 
 # 2) Why are we doing it? What are the Benefits?
 Because the 5800X3D is very much locked down on most Motherboards thanks to AMD and the Motherboard Manufacturers, most people won't be able to set CPU Ratio and/or use PBO in their Bios to get the most out of their 5800X3D. And if you just apply an offset undervolt, your performance will decrease, not increase, while some motherboards still don't allow using Curve Optimizer on the 5800X3D.
 With this guide, you will at least be able to tweak things a little inside of Windows for potentially better thermals and clockspeeds that stay longer and more often at the highest they can be.
 
 # 3) Options on what we can do
-Set PBO OC curve manually after every change in Windows powerstate
+Set PBO 2.0 CO curve manually after every change in Windows powerstate
      
-Set PBO OC curve automatically with every system boot/restart/wakeup (means after every change in Windows powerstate)
+Set PBO 2.0 CO curve automatically with every system boot/restart/wakeup (means after every change in Windows powerstate)
      
 **Optional** possibility to create custom BurnedToast alert whenever the CO curve has been set automatically. This way, you will always have the assurance that it actually applied.
     
