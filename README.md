@@ -20,67 +20,67 @@ We are using PBO2 tuner to set an OC curve (AMD curve optimizer)
 
 # 2) Why are we doing it? What are the Benefits?
 Because the 5800X3D is very much locked down on most Motherboards thanks to AMD and the Motherboard Manufacturers, most people won't be able to set CPU Ratio and/or use PBO in their Bios to get the most out of their 5800X3D. And if you just apply an offset undervolt, your performance will decrease, not increase, while some motherboards still don't allow using Curve Optimizer on the 5800X3D.
-With this Guide, you will at least be able to tweak Things a little inside of Windows for potentially better Thermals and Clockspeeds that stay longer and more often at the highest they can be.
+With this guide, you will at least be able to tweak things a little inside of Windows for potentially better thermals and clockspeeds that stay longer and more often at the highest they can be.
 
 # 3) Options on what we can do
-Set PBO OC Curve manually after every change in Windows powerstate
+Set PBO OC curve manually after every change in Windows powerstate
      
-Set PBO OC Curve automatically with every system boot/restart/wakeup (means after every change in Windows powerstate)
+Set PBO OC curve automatically with every system boot/restart/wakeup (means after every change in Windows powerstate)
      
-**Optional** possibility to create custom BurnedToast Alert whenever the CO Curve has been set automatically. This way, you will always have the assurance that it actually applied.
+**Optional** possibility to create custom BurnedToast alert whenever the CO curve has been set automatically. This way, you will always have the assurance that it actually applied.
     
 # 4) What do we need?
 [Debug-cli.7zp](https://www.overclock.net/threads/corecycler-tool-for-testing-curve-optimizer-settings.1777398/page-45#post-28999750) from PJVol from Overclocker.net thread
 
-Monitoring software to confirm CO Curve has been set([HwInfo](https://www.hwinfo.com/download/) or [RyzenMaster](https://www.amd.com/en/technologies/ryzen-master))
+Monitoring software to confirm CO curve has been set([HwInfo](https://www.hwinfo.com/download/) or [RyzenMaster](https://www.amd.com/en/technologies/ryzen-master))
 
-BurntToast Module in PowerShell
+BurntToast module in PowerShell
 
-Allow Execution Policies change in PowerShell
+Allow execution policies change in PowerShell
 
-PowerShell script for BurntToast Alert
+PowerShell script for BurntToast alert
 
-Any PNG of your Choice for the Alert
+Any PNG of your choice for the alert
 
 # 5) How to set PBO2 Tuner manually
 First download [Debug-cli.7zp](https://www.overclock.net/threads/corecycler-tool-for-testing-curve-optimizer-settings.1777398/page-45#post-28999750).
 
-Get a Monitoring Software like [HwInfo](https://www.hwinfo.com/download/) or [RyzenMaster](https://www.amd.com/en/technologies/ryzen-master). You will need this to see your CPU Voltage and Temperature and to later confirm that your Settings work.
+Get monitoring software like [HwInfo](https://www.hwinfo.com/download/) or [RyzenMaster](https://www.amd.com/en/technologies/ryzen-master). You will need this to see your CPU voltage and temperature and to later confirm that your settings work.
 
-Run a CPU Stress Test like OCCT or Benchmark like Cinebench R20/R23 to push your CPU to ~100% Utilization. See how high your CPU boosts and what Temperatures you get before any changes to it.
+Run a CPU stress test like OCCT or benchmark like Cinebench R20/R23 to push your CPU to ~100% Utilization. See how high your CPU boosts and what temperatures you get before any changes to it.
 
-Now open PBO2 Tuner.exe from the Folder we just downloaded and select the Curve tab
+Now open PBO2 Tuner.exe from the folder we just downloaded and select the curve tab
 
-Start by setting a low negative offset like -10 and decrease it in decrements of -5 to a Minimum of -30.
+Start by setting a low negative offset like -10 and decrease it in decrements of -5 to a minimum of -30.
 
 Make sure to stress test it each step to see if it is stable.
 
 Now you're done! But remember, you will have to do this again every time you restart or wake from sleep.
 
-# 6) How to set PBO2 Tuner automatically with every System boot/restart/wakeup
-Do all the Steps in [Chapter 5](#5-how-to-set-pbo2-tuner-manually) until you're satisfied with the offsets you can get.
+# 6) How to set PBO2 Tuner automatically with every system boot/restart/wakeup
+Do all the steps in [Chapter 5](#5-how-to-set-pbo2-tuner-manually) until you're satisfied with the offsets you can get.
 
-Now Open Windows Task Scheduler. Go to Actions and Create Task.
+Now open Windows Task Scheduler. Go to Actions and Create Task.
 
 **Use the provided Screenshots to configure the Task correctly.**
 
-Set General Settings.
+Set general settings.
 
 ![Chapter 6 p1_LI](https://user-images.githubusercontent.com/106172193/170519308-df13b85a-00c8-4e57-ad12-6d9b118ed1ac.jpg)
 
-Create the Trigger for System startup.
+Create the Trigger for system startup.
 
 ![Chapter 6 p2](https://user-images.githubusercontent.com/106172193/170519471-b033ca84-48ea-4822-88a4-a9daecc33b7f.png)
 
-Create the Trigger for Wakeup.
+Create the Trigger for wakeup.
 
 ![Chapter 6 p3](https://user-images.githubusercontent.com/106172193/170519673-90d6766b-6397-4638-a2b8-08c8028839e9.png)
 
-Create the Action for PBO2 tuner.exe to start with the Offsets as Startup arguments.
+Create the Action for PBO2 tuner.exe to start with the offsets as startup arguments.
 
 ![Chapter 6 p4_LI](https://user-images.githubusercontent.com/106172193/170519780-4835e046-82fc-49fe-8a9f-e1ded1144638.jpg)
 
-Set the Conditions and Settings tab.
+Set the Conditions and Settings tabs.
 
 ![Chapter 6 p5](https://user-images.githubusercontent.com/106172193/170519955-8fd6d69b-36ec-4e1c-b7b8-906fda4a28ac.png)
 
@@ -89,18 +89,18 @@ Set the Conditions and Settings tab.
 
 **Make sure to set the path to your PBO2 tuner.exe since it most likely won't be the same as mine.**
 
-**Customize the Arguments to your previously tested Offsets.**
+**Customize the arguments to your previously tested Offsets.**
 
 Click OK to save it. Congratulations, you are done!
 
-# 7) (Optional) How to create a custom Alert for every time your PBO2 Tuner settings have been applied automatically
-If you are as paranoid as me and have the urge to check PBO2 Tuner after every reboot or wakeup to see if your offset has been set, then I have something to ease your Mind. A Custom Alert tied to the Task Scheduler we just created above to inform you that the Task has been executed.
+# 7) (Optional) How to create a custom alert for every time your PBO2 Tuner settings have been applied automatically
+If you are as paranoid as me and have the urge to check PBO2 Tuner after every reboot or wakeup to see if your offset has been set, then I have something to ease your mind. A custom alert tied to the Task Scheduler we just created above to inform you that the task has been executed.
 
 ![Chapter 7 p1](https://user-images.githubusercontent.com/106172193/170520421-a21eec68-2311-4eb7-ad44-d695410b9a1c.png)
 
-Find a Logo and save into the folder with PBO2 tuner.exe in it.
+Find a logo and save into the folder with PBO2 tuner.exe in it.
 
-Open a Text file and paste this into it:
+Open a text file and paste this into it:
 
 ```pwsh
 Import-Module BurntToast;
@@ -108,9 +108,9 @@ $pngPath="C:\Users\REPLACE_THIS_WITH_THE_PATH_TO_THE_PNG_FILE\whatever.png";
 New-BurntToastNotification -Text "PBO Offset has been applied!", 'PBO Offset has been applied!' -AppLogo $pngPath
 ```
 
-Save as `Alert.ps1`, select All Files types and save in the same folder as PBO2 tuner.exe.
+Save as `Alert.ps1`, select All Files and save in the same folder as PBO2 tuner.exe.
 
-Open Windows PowerShell as Administrator and execute this command:
+Open Windows PowerShell as administrator and execute this command:
 
 ```pwsh
 Install-Module -Name BurntToast
@@ -128,11 +128,11 @@ into PowerShell and run the command. Press Y to proceed. This is necessary for `
 
 **DO THIS AT YOUR OWN RISK**, since you're disabling a security feature of windows.
 
-Now Open Task Scheduler again and look for the Task we've created in [Chapter 6](#6-how-to-set-pbo2-tuner-automatically-with-every-system-bootrestartwakeup).
+Now open Task Scheduler again and look for the task we've created in [Chapter 6](#6-how-to-set-pbo2-tuner-automatically-with-every-system-bootrestartwakeup).
 
 Right click it, select Properties, go to Actions and click New.
 
-**Use the provided Screenshot to set up correctly.**
+**Use the provided screenshot to set up correctly.**
 
 ![Chapter 7 p2_LI](https://user-images.githubusercontent.com/106172193/170520568-ed331286-d0be-4b65-9539-7949ad0334ce.jpg)
 
@@ -142,16 +142,16 @@ Click okay and save all changes.
 
 We're done!
     
-You can test it by right-clicking the Task in Task Scheduler and selecting run.
+You can test it by right-clicking the task in Task Scheduler and selecting run.
 
-# 8) What else can we do to improve CPU Clockspeeds and Thermals?
-Pretty much nothing without the support from AMD and or Motherboard Manufacturers.
+# 8) What else can we do to improve CPU clockspeeds and thermals?
+Pretty much nothing without the support from AMD and or motherboard manufacturers.
 
 Get a better CPU cooler.
 
-(For Enthusiasts with an AIO or Custom Water cooling Block) Get an AM4 Cooler offset bracket(like from DerBauer); reportedly around 5-10 degrees improvement on Core temps
+(For enthusiasts with an AIO or custom water cooling block) Get an AM4 cooler offset bracket (like from DerBauer); reportedly around 5-10 degrees improvement on core temps.
 
-Set higher Baseclock (really not recommended if you don't exactly know what it does and what Problems can be caused by it)
+Set higher Baseclock (really not recommended if you don't exactly know what it does and what problems can be caused by it)
 # 9) Resources used
 - https://www.overclock.net/threads/corecycler-tool-for-testing-curve-optimizer-settings.1777398/
 
