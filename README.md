@@ -77,7 +77,8 @@ Create the Trigger for wakeup.
 
 ![Chapter 6 p3](https://user-images.githubusercontent.com/106172193/170519673-90d6766b-6397-4638-a2b8-08c8028839e9.png)
 
-Create the Action for PBO2 tuner.exe to start with the offsets as startup arguments.
+Create the Action for PBO2 tuner.exe to start with the offsets in the field Add arguments.
+Example arguments, if your 5800X3D is as good as mine, would look like this: `-30 -30 -30 -30 -30 -30 -30 -30 0 0 0 0`. The four zeroes at the end are necessary (changing them to non-zero values will decrease performance by limiting clock speeds).
 
 ![Chapter 6 p4_LI](https://user-images.githubusercontent.com/106172193/170519780-4835e046-82fc-49fe-8a9f-e1ded1144638.jpg)
 
