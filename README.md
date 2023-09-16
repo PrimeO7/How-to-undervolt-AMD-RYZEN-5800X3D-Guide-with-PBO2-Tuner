@@ -1,33 +1,33 @@
-How to "undervolt" AMD RYZEN 5800X3D Guide with PBO2 tuner.
+How to "undervolt" AMD Ryzen 5800X3D guide with PBO2 tuner.
 
-Get the Most out of your 5800X3D using PBO curve optimizer!
+Get the most out of your 5800X3D using PBO curve optimizer!
 
 
 # Table of Contents
 1. [What are we doing?](#1-what-are-we-doing)
-2. [Why are we doing it? What are the Benefits?](#2-why-are-we-doing-it-what-are-the-benefits)
+2. [Why are we doing it? What are the benefits?](#2-why-are-we-doing-it-what-are-the-benefits)
 3. [Options on what we can do](#3-options-on-what-we-can-do)
 4. [What do we need?](#4-what-do-we-need)
 5. [How to set PBO2 Tuner manually](#5-how-to-set-pbo2-tuner-manually)
-6. [How to set PBO2 Tuner automatically with every System boot/restart/wakeup](#6-how-to-set-pbo2-tuner-automatically-with-every-system-bootrestartwakeup)
-7. [(Optional) How to create a custom Alert for every time your PBO2 Tuner settings have been applied automatically](#7-optional-how-to-create-a-custom-alert-for-every-time-your-pbo2-tuner-settings-have-been-applied-automatically)
-8. [What else can we do to improve CPU Clockspeeds and Thermals?](#8-what-else-can-we-do-to-improve-cpu-clockspeeds-and-thermals)
-9.  [Resources used](#9-resources-used)
+6. [How to set PBO2 Tuner automatically with every system boot/restart/wakeup](#6-how-to-set-pbo2-tuner-automatically-with-every-system-bootrestartwakeup)
+7. [(Optional) How to create a custom alert for every time your PBO2 Tuner settings have been applied automatically](#7-optional-how-to-create-a-custom-alert-for-every-time-your-pbo2-tuner-settings-have-been-applied-automatically)
+8. [What else can we do to improve CPU clockspeeds and thermals?](#8-what-else-can-we-do-to-improve-cpu-clockspeeds-and-thermals)
+9. [Resources used](#9-resources-used)
 
 
 # 1) What are we doing? 
-We are using PBO2 Tuner to set a CO curve (PBO 2.0 Curve Optimizer)
+We are using PBO2 Tuner to set a CO curve (PBO 2.0 Curve Optimizer curve)
 
 # 2) Why are we doing it? What are the benefits?
-Because the 5800X3D is very much locked down on most Motherboards thanks to AMD and the Motherboard Manufacturers, most people won't be able to set CPU Ratio and/or use PBO in their Bios to get the most out of their 5800X3D. And if you just apply an offset undervolt, your performance will decrease, not increase, while some motherboards still don't allow using Curve Optimizer on the 5800X3D.
-With this guide, you will at least be able to tweak things a little inside of Windows for potentially better thermals and clockspeeds that stay longer and more often at the highest they can be.
+Because the 5800X3D is very much locked down on most motherboards thanks to AMD and motherboard manufacturers, most people won't be able to set the boost clock and/or use PBO in their BIOS to get the most out of their 5800X3D. And if you just apply an offset undervolt, your performance will decrease, not increase, while some motherboards still don't allow using Curve Optimizer on the 5800X3D.
+With this guide, you will at least be able to tweak things a little inside of Windows (without the need for restarts) for potentially better thermals and clockspeeds that stay longer and more often at the highest they can be.
 
 # 3) Options on what we can do
 Set PBO 2.0 CO curve manually after every change in Windows powerstate
      
 Set PBO 2.0 CO curve automatically with every system boot/restart/wakeup (means after every change in Windows powerstate)
      
-**Optional** possibility to create custom BurnedToast alert whenever the CO curve has been set automatically. This way, you will always have the assurance that it actually applied.
+**Optional** possibility to create a custom BurnedToast alert whenever the CO curve has been set automatically. This way, you will always have the assurance that it actually applied.
     
 # 4) What do we need?
 [Debug-cli.7zp](https://www.overclock.net/threads/corecycler-tool-for-testing-curve-optimizer-settings.1777398/page-45#post-28999750) from PJVol from Overclocker.net thread
@@ -45,11 +45,11 @@ Any PNG of your choice for the alert
 # 5) How to set PBO2 Tuner manually
 First download [Debug-cli.7zp](https://www.overclock.net/threads/corecycler-tool-for-testing-curve-optimizer-settings.1777398/page-45#post-28999750).
 
-Get monitoring software like [HwInfo](https://www.hwinfo.com/download/) or [RyzenMaster](https://www.amd.com/en/technologies/ryzen-master). You will need this to see your CPU voltage and temperature and to later confirm that your settings work.
+Get monitoring software like [HWiNFO](https://www.hwinfo.com/download/) or [Ryzen Master](https://www.amd.com/en/technologies/ryzen-master). You will need this to see your CPU voltage and temperature and to later confirm that your settings work.
 
 Run a CPU stress test like OCCT or benchmark like Cinebench R20/R23 to push your CPU to ~100% Utilization. See how high your CPU boosts and what temperatures you get before any changes to it.
 
-Now open PBO2 Tuner.exe from the folder we just downloaded and select the curve tab
+Now open PBO2 Tuner.exe from the folder we just downloaded and select the curve tab.
 
 Start by setting a low negative offset like -10 and decrease it in decrements of -5 to a minimum of -30.
 
@@ -127,7 +127,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 into PowerShell and run the command. Press Y to proceed. This is necessary for `Alert.ps1` to work in the future.
 
-**DO THIS AT YOUR OWN RISK**, since you're disabling a security feature of windows.
+**DO THIS AT YOUR OWN RISK**, since you're disabling a security feature of Windows.
 
 Now open Task Scheduler again and look for the task we've created in [Chapter 6](#6-how-to-set-pbo2-tuner-automatically-with-every-system-bootrestartwakeup).
 
@@ -152,7 +152,7 @@ Get a better CPU cooler.
 
 (For enthusiasts with an AIO or custom water cooling block) Get an AM4 cooler offset bracket (like from DerBauer); reportedly around 5-10 degrees improvement on core temps.
 
-Set higher Baseclock (really not recommended if you don't exactly know what it does and what problems can be caused by it)
+Set a higher baseclock (really dangerous if you don't exactly know what it does and what problems can be caused by it)
 # 9) Resources used
 - https://www.overclock.net/threads/corecycler-tool-for-testing-curve-optimizer-settings.1777398/
 
